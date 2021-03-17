@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,9 +31,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/assets/css/style-starter.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/assets/js/jquery-3.3.1.min.js",
+              "src/assets/assets/js/jquery-1.10.2.min.js",
+              "src/assets/assets/js/Chart.min.js",
+              "src/assets/assets/js/utils.js",
+              "src/assets/assets/js/bar.js",
+              "src/assets/assets/js/linechart.js",
+              "src/assets/assets/js/jquery.nicescroll.js",
+              "src/assets/assets/js/scripts.js",
+              "src/assets/assets/js/modernizr.js",
+              "src/assets/assets/js/bootstrap.min.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -91,9 +107,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/assets/css/style-starter.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/assets/js/jquery-3.3.1.min.js",
+              "src/assets/assets/js/jquery-1.10.2.min.js",
+              "src/assets/assets/js/Chart.min.js",
+              "src/assets/assets/js/utils.js",
+              "src/assets/assets/js/bar.js",
+              "src/assets/assets/js/linechart.js",
+              "src/assets/assets/js/jquery.nicescroll.js",
+              "src/assets/assets/js/scripts.js",
+              "src/assets/assets/js/modernizr.js",
+              "src/assets/assets/js/bootstrap.min.js"
+
+            ]
           }
         },
         "lint": {
