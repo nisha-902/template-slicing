@@ -6,7 +6,14 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
+} 
+export function getBaseUrl(){
+  return "http://hsp.krishnasmartsystem.com/api_project/public/api"
 }
-
-platformBrowserDynamic().bootstrapModule(AppModule)
+const providers=[
+  {
+    provide:'BaseUrl', useFactory: getBaseUrl, deps:[]
+  }
+]
+platformBrowserDynamic( providers).bootstrapModule(AppModule)
   .catch(err => console.error(err));
