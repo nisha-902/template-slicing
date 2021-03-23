@@ -25,7 +25,9 @@ export class LoginComponent implements OnInit {
   onclick(){
     this.userauth.login(this.loginForm.value).subscribe(
       (res:any)=>{
-        console.log(res)
+        //console.log(res.response.token)
+        this.userdata.setData(res.response.token)
+        this.router.navigateByUrl('layout/dash')
       },
       err =>{
         console.log(err)
