@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsComponent } from './forms/forms.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
+import { ListstudentComponent } from './student/liststudent/liststudent.component';
 import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
       {path:'dash',component:DashboardComponent, canActivate:[AuthGuard]},
      
       {path:'for', component:FormsComponent, canActivate:[AuthGuard]},
-      {path:'tab', component:TableComponent ,canActivate:[AuthGuard]}
+      {path:'tab', component:TableComponent ,canActivate:[AuthGuard]},
+      {path:"studentlist",component:ListstudentComponent, canActivate:[AuthGuard]}
       
    ]
   }

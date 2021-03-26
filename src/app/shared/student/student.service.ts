@@ -18,4 +18,10 @@ export class StudentService {
 return this.http.post(this.BaseUrl+"/register",form,{headers:header_object})
 
   }
+  public getStudent(){
+    var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
+return this.http.get(this.BaseUrl+"/getStudent",{headers:header_object})
 }
+
+}
+

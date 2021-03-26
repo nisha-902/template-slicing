@@ -12,6 +12,7 @@ import { FormsComponent } from './forms/forms.component';
 import { TableComponent } from './table/table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { ListstudentComponent } from './student/liststudent/liststudent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { HttpClientModule} from '@angular/common/http';
     LoginComponent,
     LayoutComponent,
     FormsComponent,
-    TableComponent
+    TableComponent,
+    ListstudentComponent
   ],
   imports: [
     BrowserModule,
