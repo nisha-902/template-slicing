@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from '../shared/user/auth.service';
 import { UserdataService } from '../shared/userdata.service';
 
@@ -11,7 +12,8 @@ import { UserdataService } from '../shared/userdata.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userdata:UserdataService, private router:Router,  private userauth:AuthService ){ }
+  constructor(private userdata:UserdataService, private router:Router,  private userauth:AuthService ,
+    private spinner:NgxSpinnerService){ }
   loginForm=new FormGroup({
     'email':new FormControl(''),
     'password':new FormControl('')
@@ -23,11 +25,16 @@ export class LoginComponent implements OnInit {
   }
   }
   onclick(){
+    this.spinner.show()
     this.userauth.login(this.loginForm.value).subscribe(
       (res:any)=>{
-        console.log(res)
+        this.spinner.hide()
+        //console.log(res.response.token)
+        this.userdata.setData(res.response.token)
+        this.router.navigateByUrl('layout/dash')
       },
       err =>{
+        this.spinner.hide()
         console.log(err)
       }
     )

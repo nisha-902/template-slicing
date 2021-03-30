@@ -1,5 +1,3 @@
-<ngx-spinner>
-</ngx-spinner>
 <div class="main-content">
     <div class="container-fluid">
         <div class="page-header">
@@ -31,25 +29,35 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header"><h3>Default form</h3></div>
+                    <div class="card-header"><h3>Default table</h3></div>
                     <div class="card-body">
-                        <form  #form="ngForm" (submit)="register()">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Username</label>
-                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Name" #name="ngModel" name="name"[(ngModel)]="formModel.name">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" #email="ngModel" name="email"[(ngModel)]="formModel.email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" #password="ngModel" name="password"[(ngModel)]="formModel.password">
-                            </div>
+                        <table id="data-table" class="table table-responsive">
                             
-                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                            <button class="btn btn-light">Cancel</button>
-                          </form>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                            
+                            </tr>
+                            <select >
+                                <option selected >select your value</option><br><br>
+                                <option [value]="data.email" *ngFor="let data of students">
+                                    {{data.id}}
+                                    {{data.name}}
+                                    {{data.email}}
+                                </option>
+                                
+                            </select>
+                            <tbody>
+                                
+                            <tr   *ngFor="let data of students">
+                                <td>{{data.id}}</td>
+                                <td>{{data.name}}<td>
+                                <td>{{data.email}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                   
                     </div>
                 </div>
             </div>
@@ -62,3 +70,4 @@
        
     </div>
 </div>
+

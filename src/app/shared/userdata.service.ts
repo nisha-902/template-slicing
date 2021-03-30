@@ -7,13 +7,13 @@ export class UserdataService {
 
   constructor() { }
   public setData(userdata){
-    sessionStorage.setItem('username',userdata)
+    sessionStorage.setItem('token',userdata)
   }
   public getData(){
-   return sessionStorage.getItem('username')
+   return sessionStorage.getItem('token')
   }
   public removeData(){
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('token')
   }
 
 }
