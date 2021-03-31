@@ -22,6 +22,14 @@ return this.http.post(this.BaseUrl+"/register",form,{headers:header_object})
     var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
 return this.http.get(this.BaseUrl+"/getStudent",{headers:header_object})
 }
+public getStudentById(id){
+  var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
+return this.http.get(this.BaseUrl+"/getStudentById/"+id,{headers:header_object})
+}
+public updateStudent(form,id){
+  var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
+  return this.http.post(this.BaseUrl+"/updateStudent/"+id, form ,{headers:header_object})
+}
 
 }
 
