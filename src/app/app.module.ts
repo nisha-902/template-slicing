@@ -17,6 +17,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { EditstudentComponent } from './student/editstudent/editstudent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { ToastrModule } from 'ngx-toastr';
     LayoutComponent,
     FormsComponent,
     TableComponent,
-    ListstudentComponent
+    ListstudentComponent,
+    EditstudentComponent
   ],
   imports: [
     BrowserModule,

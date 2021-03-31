@@ -39,7 +39,7 @@
                 <div class="card">
                     <div class="card-header"><h3>Default form</h3></div>
                     <div class="card-body">
-                        <form  #form="ngForm" (submit)="register()">
+                        <form  #form="ngForm" (submit)='updateStudent()' >
                             <div class="form-group">
                                 <label for="exampleInputUsername1">Username</label>
                                 <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Name" #name="ngModel" name="name"[(ngModel)]="formModel.name">
@@ -68,3 +68,4 @@
        
     </div>
 </div>
+
