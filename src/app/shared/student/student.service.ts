@@ -30,6 +30,9 @@ public updateStudent(form,id){
   var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
   return this.http.post(this.BaseUrl+"/updateStudent/"+id, form ,{headers:header_object})
 }
-
+public deleteStudent(id){
+  var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
+  return this.http.delete(this.BaseUrl+"/deleteStudent/"+id,{headers:header_object})
+}
 }
 
