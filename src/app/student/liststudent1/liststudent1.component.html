@@ -27,40 +27,36 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header d-block"><h3>Default table</h3></div>
+                    <div class="card-header"><h3>Default table</h3></div>
                     <div class="card-body">
                         <table id="data-table" class="table table-responsive">
                             
                             <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>id</th>
+                                <th>brand_name</th>
+                                <th>category_name</th>
+                                <th>product_name</th>
+                                <th>price</th>
+                                <th>quantity</th>
+                               
                             
                            </tr>
                           
-                            <tbody>
+                            
                                 
                             <tr   *ngFor="let data of students">
                                 <td>{{data.id}}</td>
-                                <td>{{data.name}}</td>
-                                <td>{{data.email}}</td>
-                                <td> <a routerLink="/layout/editstudent/{{data.id}}">Edit</a></td>
-                                <td><button class="btn btn-danger" (click)="delete(data.id)">Delete</button></td>
+                                <td>{{data.brand_name}}</td>
+                                <td>{{data.category_name}}</td>
+                                <td>{{data.product_name}}</td>
+                                <td>{{data.price}}</td>
+                                <td>{{data.quantity}}</td>
+                             
                             </tr>
-                            </tbody>
-                            <select >
-                                <option selected >select your value</option><br><br>
-                                <option [value]="data.email" *ngFor="let data of students">
-                                    {{data.id}}
-                                    {{data.name}}
-                                    {{data.email}}
-                                </option>
-                                
-                            </select>
+                            
+                           
                         </table>
                    
                     </div>
@@ -75,4 +71,5 @@
        
     </div>
 </div>
+
 

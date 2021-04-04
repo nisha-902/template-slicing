@@ -1,0 +1,79 @@
+<ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#ffaacc"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="row align-items-end">
+                <div class="col-lg-8">
+                    <div class="page-header-title">
+                        <i class="ik ik-edit bg-blue"></i>
+
+                        <div class="d-inline">
+                            <h5>Components</h5>
+                            <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <nav class="breadcrumb-container" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="../index.html"><i class="ik ik-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Components</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h3>Default form</h3></div>
+                    <div class="card-body">
+                        <form  #form="ngForm" (submit)="addProduct()">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">brand_name</label>
+                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Name" #brand_name="ngModel" name="brand_name"[(ngModel)]="formModel.brand_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">category_name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="category" #category_name="ngModel" name="category_name"[(ngModel)]="formModel.category_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">product_name</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="product" #product_name="ngModel" name="product_name"[(ngModel)]="formModel.product_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">price</label>
+                                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="price" #price="ngModel" name="price"[(ngModel)]="formModel.price">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">quantity</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="quantity" #quantity="ngModel" name="quantity"[(ngModel)]="formModel.quantity">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+
+          
+        </div>
+
+        
+
+       
+    </div>
+</div>
+

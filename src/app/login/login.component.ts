@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         else{
           this.spinner.hide()
           this.router.navigateByUrl('login')
-          this.toastr.error('invalid email')
+          this.toastr.error('invalid email or password')
         }
       },
       err =>{

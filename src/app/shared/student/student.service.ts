@@ -34,5 +34,11 @@ public deleteStudent(id){
   var header_object = new HttpHeaders().set('Authorization','Bearer '+this.token)
   return this.http.delete(this.BaseUrl+"/deleteStudent/"+id,{headers:header_object})
 }
+public addProduct(form){
+  return this.http.post(this.BaseUrl+"/addProduct",form)
+}
+public getProduct(){
+  return this.http.get(this.BaseUrl+"/getProduct")
+}
 }
 
