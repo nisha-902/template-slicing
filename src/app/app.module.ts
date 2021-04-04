@@ -18,6 +18,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { EditstudentComponent } from './student/editstudent/editstudent.component';
+import { MyproductComponent } from './myproduct/myproduct.component';
+import { Liststudent1Component } from './student/liststudent1/liststudent1.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { EditstudentComponent } from './student/editstudent/editstudent.componen
     FormsComponent,
     TableComponent,
     ListstudentComponent,
-    EditstudentComponent
+    EditstudentComponent,
+    MyproductComponent,
+    Liststudent1Component
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ export class ListstudentComponent implements OnInit {
   getStudent(){
     this.student.getStudent().subscribe(
       (res:any)=>{
-        //console.log(res)
+        // console.log(res)
         
         this.students=res.response.data
       
